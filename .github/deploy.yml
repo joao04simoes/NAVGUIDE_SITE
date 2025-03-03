@@ -7,7 +7,6 @@ on:
       - main  # Ou outra branch para onde você faz merge
 
 jobs:
-  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
