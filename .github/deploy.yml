@@ -1,0 +1,32 @@
+name: Deploy após Merge
+run-name: ${{ github.actor }} is running the CD ⚙️
+
+on:
+  push:
+    branches:
+      - main  # Ou outra branch para onde você faz merge
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Construir o projeto
+        run: npm run build
+
+      - name: Enviar arquivos para o servidor
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: "dist/*"
+          target: "/home/ist1106070/web/NAVGUIDE"
+
+      
