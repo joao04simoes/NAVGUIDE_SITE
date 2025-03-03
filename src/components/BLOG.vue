@@ -1,6 +1,7 @@
 <template>
   <div class="blog-container">
     <h1>Blog NAVGUIDE</h1>
+    <h1>Em construção</h1>
 
     <div v-for="(post, index) in posts" :key="index" class="blog-post">
       <h2>{{ post.title }}</h2>
@@ -16,16 +17,16 @@ import { ref } from 'vue';
 // Lista de posts do blog
 const posts = ref([
   {
-    title: "Explorando o Campus",
-    content: "Descobre os melhores lugares para estudar, relaxar e socializar na universidade!"
+    title: "semana 1",
+    content: "Não fizemos nada"
   },
   {
-    title: "Dicas para Novos Estudantes",
-    content: "Organiza o teu tempo, encontra grupos de estudo e aproveita ao máximo a tua experiência académica."
+    title: "semana 2",
+    content: "Não fizemos nada"
   },
   {
-    title: "Eventos da Semana",
-    content: "Consulta a lista de eventos e atividades a decorrer no campus esta semana."
+    title: "semana 3",
+    content: "Não fizemos nada"
   }
 ]);
 </script>
