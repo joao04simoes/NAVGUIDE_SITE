@@ -1,7 +1,7 @@
 <template>
     <div class="main-container">
         <h1>Bem-vindo ao NAVGUIDE</h1>
-        <p>Este site é uma bosta.</p>
+        <p>Este site é bonito. xx</p>
 
         <button @click="$router.push('/Blog')">Ir para o Blog</button>
     </div>
