@@ -4,10 +4,10 @@ run-name: ${{ github.actor }} is running the CD ⚙️
 on:
   push:
     branches:
-      - main  # Ou outra branch para onde você faz merge
+      - main
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,13 +20,9 @@ jobs:
       - name: Construir o projeto
         run: npm run build
 
-      - name: Enviar arquivos para o servidor
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: "dist/*"
-          target: "/home/ist1106070/web/NAVGUIDE"
+      - name: Instalar sshpass
+        run: sudo apt-get install -y sshpass
 
-      
+      - name: Enviar arquivos para o servidor via SCP
+        run: |
+          sshpass -p "${{ secrets.SSH_PASSWORD }}" scp -o StrictHostKeyChecking=no -r dist/* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/ist1106070/web/NAVGUIDE
