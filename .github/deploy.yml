@@ -4,10 +4,10 @@ run-name: ${{ github.actor }} is running the CD ⚙️
 on:
   push:
     branches:
-      - main  # Ou outra branch para onde você faz merge
+      - main
 
 jobs:
-  deploy:  # Nome do job (pode ser qualquer nome)
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -26,4 +26,3 @@ jobs:
       - name: Enviar arquivos para o servidor via SCP
         run: |
           sshpass -p "${{ secrets.SSH_PASSWORD }}" scp -o StrictHostKeyChecking=no -r dist/* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/ist1106070/web/NAVGUIDE
-
