@@ -1,6 +1,6 @@
 <template>
     <div class="main-container">
-        <h1>Bem-vindo ao NAVGUIDE teste de deploy3</h1>
+        <h1>Bem-vindo ao NAVGUIDE teste de deploy4</h1>
         <p>Este é o ecrã principal da aplicação.</p>
 
         <button @click="$router.push('/Blog')">Ir para o Blog</button>
