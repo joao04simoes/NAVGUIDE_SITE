@@ -1,9 +1,9 @@
 <template>
   <div class="compass-container">
-    <div class="compass" :style="{ transform: `rotate(${heading * -1}deg)` }">
+    <div class="compass" :style="{ transform: `rotate(${adjustedHeading * -1}deg)` }">
       <div class="needle"></div>
     </div>
-    <p>Direção: {{ heading.toFixed(2) }}°</p>
+    <p>Direção: {{ adjustedHeading.toFixed(2) }}°</p>
   </div>
 </template>
 
@@ -12,6 +12,7 @@ export default {
   data() {
     return {
       heading: 0,
+      adjustedHeading: 0,
     };
   },
   mounted() {
@@ -27,7 +28,11 @@ export default {
   methods: {
     updateHeading(event) {
       if (event.alpha !== null) {
-        this.heading = event.alpha;
+        let compassHeading = event.alpha;
+
+        // Ajustar a direção dependendo da rotação do ecrã
+        let screenOrientation = screen.orientation?.angle || window.orientation || 0;
+        this.adjustedHeading = (compassHeading + screenOrientation) % 360;
       }
     },
   },
