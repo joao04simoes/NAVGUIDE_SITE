@@ -1,6 +1,9 @@
 <template>
   <div class="compass-container">
-    <div class="compass" :style="{ transform: `rotate(${adjustedHeading * -1}deg)` }">
+    <div class="compass">
+      <div class="outer-ring" :style="{ transform: `rotate(${adjustedHeading}deg)` }">
+        <span v-for="num in numbers" :key="num" :style="getNumberStyle(num)">{{ num }}</span>
+      </div>
       <div class="needle"></div>
     </div>
     <p>Direção: {{ adjustedHeading.toFixed(2) }}°</p>
@@ -13,6 +16,7 @@ export default {
     return {
       heading: 0,
       adjustedHeading: 0,
+      numbers: [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330],
     };
   },
   mounted() {
@@ -29,13 +33,19 @@ export default {
     updateHeading(event) {
       if (event.alpha !== null) {
         let compassHeading = event.alpha;
-
-        // Ajustar a direção dependendo da rotação do ecrã
         let screenOrientation = screen.orientation?.angle || window.orientation || 0;
         this.adjustedHeading = (compassHeading + screenOrientation) % 360;
       }
     },
-  },
+    getNumberStyle(num) {
+      const angle = num * (Math.PI / 180);
+      const radius = 90;
+      return {
+        position: 'absolute',
+        transform: `translate(${radius * Math.sin(angle)}px, ${-radius * Math.cos(angle)}px)`,
+      };
+    }
+  }
 };
 </script>
 
@@ -58,6 +68,22 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+}
+
+.outer-ring {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.outer-ring span {
+  position: absolute;
 }
 
 .needle {
