@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import Footer from "./Footer.vue";
 
 // Interviews data
 const interviews = ref([
@@ -83,13 +84,7 @@ const closeInterview = () => {
             </div>
         </main>
 
-        <!-- Footer -->
-        <footer class="bg-gray-800 text-white py-6 mt-10">
-            <div class="container mx-auto text-center">
-                <p>&copy; 2025 NAVGUIDE. All rights reserved.</p>
-
-            </div>
-        </footer>
+        <Footer />
 
         <!-- Modal for Full Interview -->
         <div v-if="selectedInterview" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4"
