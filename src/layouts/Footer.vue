@@ -11,7 +11,8 @@ const year = ref(new Date().getFullYear());
                 <!-- Logo / Nome do Projeto - Centralizado -->
                 <div class="md:col-span-3 flex flex-col items-center">
                     <h2 class="text-xl font-bold">NAVGUIDE</h2>
-                    <p class="text-sm mt-2">Facilitando a navegação para pessoas com deficiência visual.</p>
+                    <p class="text-sm mt-2">Empowering visually impaired individuals with real-time navigation in
+                        supermarkets.</p>
                 </div>
 
                 <!-- Links Úteis (Comentado)
@@ -34,7 +35,7 @@ const year = ref(new Date().getFullYear());
 
             <!-- Copyright -->
             <div class="mt-8 text-center text-sm border-t border-gray-500 pt-4">
-                © {{ year }} NAVGUIDE. Todos os direitos reservados.
+                © {{ year }} NAVGUIDE. All Rights Reserved.
             </div>
         </div>
     </footer>
