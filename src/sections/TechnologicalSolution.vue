@@ -25,15 +25,14 @@ const solutions = ref([
 </script>
 
 <template>
-    <div class="bg-white-500 text-white py-20 px-6">
+    <div id="tecSol" class="bg-white-500 text-white py-20 px-6">
         <div class="container mx-auto text-center">
             <!-- Section Title -->
             <h2 class="text-4xl md:text-5xl text-black font-bold mb-10">Technological Solution</h2>
 
             <!-- Cards Container -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div v-for="solution in solutions" :key="solution.id" 
-                    class="bg-purple-400 shadow-lg rounded-xl p-8 flex flex-col items-center 
+                <div v-for="solution in solutions" :key="solution.id" class="bg-purple-400 shadow-lg rounded-xl p-8 flex flex-col items-center 
                            transition transform hover:-translate-y-2 hover:shadow-2xl">
 
                     <!-- Icon -->
@@ -51,4 +50,3 @@ const solutions = ref([
         </div>
     </div>
 </template>
-

@@ -1,13 +1,28 @@
 <script setup>
+import { useRouter } from 'vue-router';
+import { ref } from 'vue';
+
+const router = useRouter();
+const mobileNav = ref(false);
+
+const scrollToSection = (id) => {
+    if (router.currentRoute.value.path !== "/") {
+        router.push('/').then(() => {
+            setTimeout(() => {
+                document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+            }, 300);
+        });
+    } else {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    }
+    mobileNav.value = false;
+};
 </script>
 
 <template>
     <!-- Hero Section Start -->
-    <div 
-        id="project-intro" 
-        class="relative bg-cover bg-center bg-no-repeat text-white"
-        style="background-image: url('/images/Imagem inicio.jpg');"
-    >
+    <div id="project-intro" class="relative bg-cover bg-center bg-no-repeat text-white"
+        style="background-image: url('/images/Imagem inicio.jpg');">
         <!-- Overlay (Optional, for better readability) -->
         <div class="absolute inset-0 bg-black bg-opacity-60"></div>
 
@@ -18,8 +33,14 @@
                     Empowering visually impaired individuals with real-time navigation in supermarkets.
                 </p>
                 <div class="mt-8 flex justify-center space-x-4">
-                    <button class="px-6 py-3 bg-blue-600 text-white rounded-lg text-lg font-semibold hover:bg-red-700 transition">Learn More</button>
-                    <button class="px-6 py-3 bg-transparent border-2 border-white text-white rounded-lg text-lg font-semibold hover:bg-white hover:text-black transition">Blog</button>
+                    <div
+                        class="px-6 py-3 bg-blue-600 text-white rounded-lg text-lg font-semibold hover:bg-red-700 transition">
+                        <router-link to="/" @click="scrollToSection('tecSol')">Learn More</router-link>
+                    </div>
+                    <div
+                        class="px-6 py-3 bg-transparent border-2 border-white text-white rounded-lg text-lg font-semibold hover:bg-white hover:text-black transition">
+                        <router-link to="/blog">BLOG</router-link>
+                    </div>
                 </div>
             </div>
         </section>
