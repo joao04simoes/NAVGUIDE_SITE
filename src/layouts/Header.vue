@@ -28,6 +28,7 @@ const scrollToSection = (id) => {
     <div class="container mx-auto px-5">
         <header class="flex justify-between py-6 items-center">
             <!-- Logo -->
+
             <div class="flex items-center">
                 <img src="/images/LogoNavGuide.png" alt="NAVGUIDE Logo" class="h-12 md:h-16 object-contain">
             </div>
