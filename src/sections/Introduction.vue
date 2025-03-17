@@ -22,7 +22,7 @@ const scrollToSection = (id) => {
 <template>
     <!-- Hero Section Start -->
     <div id="project-intro" class="relative bg-cover bg-center bg-no-repeat text-white"
-        style="background-image: url('/NAVGUIDE/images/ImagemInicio.jpg');">
+        style="background-image: url('https://web.tecnico.ulisboa.pt/joao.simoes/NAVGUIDE/images/ImagemInicio.jpg');">
         <!-- Overlay (Optional, for better readability) -->
         <div class="absolute inset-0 bg-black bg-opacity-60"></div>
 
