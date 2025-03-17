@@ -13,9 +13,9 @@ import teamMembers from "../data/teamMembers";
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
                 <div v-for="member in teamMembers" :key="member.id" class="shadow-lg rounded-lg p-6 text-center">
-                    <div class="flex justify-center mt-6">
+                    <!--<div class="flex justify-center mt-6">
                         <img :src="member.photo" class="w-24 h-24 rounded-full" />
-                    </div>
+                    </div>-->
                     <h3 class="text-2xl font-theme-heading font-medium mt-4">{{ member.name }}</h3>
                     <p class="text-md font-theme-content text-theme-grayish-blue mt-2">{{ member.role }}</p>
                     <p class="text-sm font-theme-content text-theme-grayish-blue mt-2">{{ member.bio }}</p>

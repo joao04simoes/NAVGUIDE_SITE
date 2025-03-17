@@ -54,12 +54,12 @@ const closeInterview = () => {
 
             <!-- Blog Cards -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div v-for="interview in interviews" :key="interview.id" 
+                <div v-for="interview in interviews" :key="interview.id"
                     class="bg-white shadow-lg rounded-xl p-6 cursor-pointer hover:shadow-2xl transition transform hover:-translate-y-2"
                     @click="openInterview(interview)">
 
-                    <!-- Image -->
-                    <img :src="interview.image" alt="Interview Image" class="w-full h-40 object-cover rounded-md mb-4">
+                    <!-- Image 
+                    <img :src="interview.image" alt="Interview Image" class="w-full h-40 object-cover rounded-md mb-4">-->
 
                     <!-- Title -->
                     <h3 class="text-xl font-semibold mb-2">{{ interview.title }}</h3>
@@ -74,11 +74,12 @@ const closeInterview = () => {
         <div v-if="selectedInterview" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4">
             <div class="bg-white p-6 max-w-2xl w-full rounded-lg shadow-lg">
                 <h2 class="text-2xl font-bold mb-4">{{ selectedInterview.title }}</h2>
-                
+
                 <!-- Display full text with HTML formatting -->
                 <div class="text-gray-700" v-html="selectedInterview.fullText"></div>
 
-                <button @click="closeInterview" class="mt-6 px-6 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition">
+                <button @click="closeInterview"
+                    class="mt-6 px-6 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition">
                     Close
                 </button>
             </div>
