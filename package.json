@@ -14,7 +14,8 @@
     "sweetalert2": "^11.7.18",
     "vue": "^3.3.4",
     "vue-router": "^4.5.0",
-    "vue3-smooth-scroll": "^0.8.1"
+    "vue3-smooth-scroll": "^0.8.1",
+    "pdfjs-dist": "^3.11.174"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.4",

@@ -5,6 +5,7 @@ import TechSolution from "../sections/TechnologicalSolution.vue";
 import team from "../sections/team.vue";
 import Header from "./Header.vue";
 import Footer from "./Footer.vue";
+import pdf from "../sections/pdf.vue";
 </script>
 
 <template>
@@ -12,6 +13,7 @@ import Footer from "./Footer.vue";
     <Intro />
     <Description />
     <TechSolution />
+    <pdf />
 
     <team />
 

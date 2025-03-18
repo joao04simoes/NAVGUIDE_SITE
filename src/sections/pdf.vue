@@ -1,6 +1,7 @@
 <template>
     <div class="pdf-container">
         <canvas ref="pdfCanvas"></canvas>
+        <PdfViewer pdfUrl="/images/PIC.pdf" />
     </div>
 </template>
 

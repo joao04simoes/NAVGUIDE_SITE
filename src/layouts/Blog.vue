@@ -35,11 +35,6 @@
             </div>
         </main>
 
-        <div class="compass">
-            <div class="needle" :style="{ transform: `rotate(${heading}deg)` }"></div>
-            <p>{{ heading.toFixed(2) }}°</p>
-        </div>
-
         <Footer />
 
         <!-- Modal for Full Interview -->
@@ -60,28 +55,8 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref } from 'vue';
 import Footer from "./Footer.vue";
-
-const heading = ref(0);
-
-const updateHeading = (event) => {
-    if (event.alpha !== null) {
-        heading.value = 360 - event.alpha;
-    }
-};
-
-onMounted(() => {
-    if (window.DeviceOrientationEvent) {
-        window.addEventListener("deviceorientation", updateHeading, true);
-    } else {
-        alert("O seu dispositivo não suporta orientação de dispositivos.");
-    }
-});
-
-onUnmounted(() => {
-    window.removeEventListener("deviceorientation", updateHeading);
-});
 
 const interviews = ref([
     {
@@ -129,24 +104,5 @@ const closeInterview = () => {
 .fade-enter,
 .fade-leave-to {
     opacity: 0;
-}
-
-.compass {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-}
-
-.needle {
-    width: 10px;
-    height: 100px;
-    background-color: red;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform-origin: bottom center;
 }
 </style>
