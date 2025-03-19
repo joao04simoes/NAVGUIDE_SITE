@@ -1,10 +1,14 @@
 <script setup>
 import { useRouter } from 'vue-router';
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 
 const router = useRouter();
 const mobileNav = ref(false);
+const showButtons = ref(false);
+const typedText = ref(""); // For typewriter effect
+const fullText = "Empowering visually impaired individuals with real-time navigation in supermarkets"; // Subtitle text
 
+// Scroll function
 const scrollToSection = (id) => {
     if (router.currentRoute.value.path !== "/") {
         router.push('/').then(() => {
@@ -17,33 +21,68 @@ const scrollToSection = (id) => {
     }
     mobileNav.value = false;
 };
+
+// Typewriter effect function
+const startTyping = () => {
+    let index = 0;
+    const interval = setInterval(() => {
+        if (index < fullText.length) {
+            typedText.value += fullText[index];
+            index++;
+        } else {
+            clearInterval(interval);
+            showButtons.value = true; // Show buttons after subtitle finishes typing
+        }
+    }, 30); // Adjust speed here (lower is faster)
+};
+
+// Start animations when component loads
+onMounted(() => {
+    startTyping();
+});
 </script>
 
 <template>
-    <!-- Hero Section Start -->
-    <div id="project-intro" class="relative bg-cover bg-center bg-no-repeat text-white"
-        style="background-image: url('https://web.tecnico.ulisboa.pt/joao.simoes/NAVGUIDE/images/ImagemInicio.jpg');">
-        <!-- Overlay (Optional, for better readability) -->
-        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+  <section id="intro" class="h-[80vh] flex flex-col items-center justify-center text-center bg-cyan-700 text-white">
+    
+    <!-- Static Title -->
+    <h1 class="text-5xl md:text-7xl font-extrabold uppercase">
+      NAVGUIDE
+    </h1>
 
-        <section class="py-32 text-center relative z-10">
-            <div class="w-full md:w-3/5 mx-auto">
-                <h1 class="text-5xl md:text-7xl font-bold uppercase">NavGuide</h1>
-                <p class="text-xl md:text-2xl mt-4 font-light tracking-wide">
-                    Empowering visually impaired individuals with real-time navigation in supermarkets.
-                </p>
-                <div class="mt-8 flex justify-center space-x-4">
-                    <div
-                        class="px-6 py-3 bg-blue-600 text-white rounded-lg text-lg font-semibold hover:bg-red-700 transition">
-                        <router-link to="/" @click="scrollToSection('tecSol')">Learn More</router-link>
-                    </div>
-                    <div
-                        class="px-6 py-3 bg-transparent border-2 border-white text-white rounded-lg text-lg font-semibold hover:bg-white hover:text-black transition">
-                        <router-link to="/blog">BLOG</router-link>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-    <!-- Hero Section End -->
+    <!-- Typewriter Subtitle Effect -->
+    <p class="text-lg md:text-xl mt-4 max-w-5xl">
+      {{ typedText }}
+    </p>
+
+    <!-- Buttons Fade In After Typing Completes -->
+    <transition name="fade-up" appear>
+      <div v-if="showButtons" class="mt-8 flex space-x-4">
+        <a href="#" class="px-9 py-4 bg-white text-black text-xl font-medium rounded-lg hover:bg-cyan-900 hover:text-white transition">
+        Learn More
+        </a>
+
+        <a href="#blog" class="px-6 py-4 border border-white text-white text-x1 font-medium rounded-lg hover:bg-white hover:text-black transition">
+          Blog
+        </a>
+      </div>
+    </transition>
+
+  </section>
 </template>
+
+<style>
+/* Smooth Fade & Slide Up Animation */
+.fade-up-enter-active {
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-up-enter-from {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.fade-up-leave-to {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+</style>
+

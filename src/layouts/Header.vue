@@ -1,93 +1,61 @@
 <script setup>
 import { ref } from 'vue';
-import { useRouter } from 'vue-router';
 
-const mobileNav = ref(false);
-const router = useRouter();
-
-const toggleMobileNav = () => {
-    mobileNav.value = !mobileNav.value;
-};
-
-const scrollToSection = (id) => {
-    if (router.currentRoute.value.path !== "/") {
-        router.push('/').then(() => {
-            setTimeout(() => {
-                document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-            }, 300);
-        });
-    } else {
-        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-    }
-    mobileNav.value = false;
-};
+const isMenuOpen = ref(false);
 </script>
 
 <template>
-    <!-- Navbar -->
-    <div class="container mx-auto px-5">
-        <header class="flex justify-between py-6 items-center">
-            <!-- Logo -->
+    <nav class="bg-white shadow-lg rounded-full mx-auto mt-6 max-w-6xl px-6 py-3 flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+            <img src="/images/Logo NavGuide sem texto.png" alt="Logo" class="h-14 w-14" />
+            <span class="text-lg font-bold text-cyan-700">NAVGUIDE</span>
+        </div>
+    
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-8">
+            <a href="#" class="text-cyan-600 font-medium">Home</a>
+            <a href="#" class="text-gray-500 hover:text-cyan-600 transition">What is NavGuide</a>
+            <a href="#" class="text-gray-500 hover:text-cyan-600 transition">Team</a>
+            <a href="#" class="text-gray-500 hover:text-cyan-600 transition">Partners</a>
+            
+            <!-- Dropdown 
+            <div class="relative group">
+                <button class="text-gray-500 hover:text-cyan-600 transition flex items-center">
+                    Pages
+                    <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <div class="absolute hidden group-hover:block bg-white shadow-md rounded-lg mt-2 w-36 py-2">
+                    <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Page 1</a>
+                    <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Page 2</a>
+                </div>
+            </div>-->
+        </div>
 
-            <div class="flex items-center">
-                <img src="/images/LogoNavGuide.png" alt="NAVGUIDE Logo" class="h-12 md:h-16 object-contain">
-            </div>
+        <!-- Blog -->
+        <a href="#" class="hidden md:block bg-cyan-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-cyan-700 transition">
+            Blog
+        </a>
 
-            <!-- Botão Menu Mobile -->
-            <button @click="toggleMobileNav" type="button" class="md:hidden focus:outline-none">
-                <svg viewBox="0 0 24 24" class="h-8 w-8 text-white">
-                    <path fill-rule="evenodd"
-                        d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2z">
-                    </path>
-                </svg>
-            </button>
-
-            <!-- Menu Desktop -->
-            <nav class="hidden md:flex items-center">
-                <ul class="flex space-x-10 font-medium items-center">
-                    <li class="uppercase hover:text-theme-secondary transition duration-200">
-                        <router-link to="/" @click.native="scrollToSection('team')">TEAM</router-link>
-                    </li>
-                    <li class="uppercase hover:text-theme-secondary transition duration-200">
-                        <router-link to="/" @click.native="scrollToSection('tecSol')">SOLUTION</router-link>
-                    </li>
-                    <li>
-                        <router-link to="/blog" class="uppercase bg-theme-secondary px-6 py-2 text-white rounded shadow-md 
-                hover:bg-white border-2 border-transparent hover:border-theme-secondary 
-                hover:text-theme-secondary cursor-pointer transition duration-200 
-                flex items-center h-10">
-                            BLOG
-                        </router-link>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div v-if="mobileNav"
-        class="fixed top-0 left-0 w-full h-screen bg-theme-dark-blue flex flex-col items-center justify-center z-50">
-        <!-- Botão para fechar -->
-        <button @click="toggleMobileNav" class="absolute top-5 right-5">
-            <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        <!-- Mobile Menu Button -->
+        <button @click="isMenuOpen = !isMenuOpen" class="md:hidden focus:outline-none">
+            <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
             </svg>
         </button>
 
-        <!-- Links do menu -->
-        <ul class="text-white text-3xl space-y-8 text-center">
-            <li>
-                <a @click="scrollToSection('team')" class="cursor-pointer hover:text-gray-400 transition">TEAM</a>
-            </li>
-            <li>
-                <a @click="scrollToSection('tecSol')" class="cursor-pointer hover:text-gray-400 transition">SOLUTION</a>
-            </li>
-            <li>
-                <router-link to="/blog" class="bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600 transition">
-                    BLOG
-                </router-link>
-            </li>
-        </ul>
-    </div>
+        <!-- Mobile Menu -->
+        <div v-if="isMenuOpen" class="absolute top-16 left-0 w-full bg-white shadow-lg rounded-lg p-4 flex flex-col space-y-4 md:hidden">
+            <a href="#" class="text-cyan-600 font-medium">Home</a>
+            <a href="#" class="text-gray-500 hover:text-cyan-600 transition">About</a>
+            <a href="#" class="text-gray-500 hover:text-cyan-600 transition">Features</a>
+            <a href="#" class="text-gray-500 hover:text-cyan-600 transition">Pricing</a>
+            <a href="#" class="text-gray-500 hover:text-cyan-600 transition">Pages</a>
+            <a href="#" class="bg-cyan-600 text-white px-6 py-2 rounded-full text-center font-semibold hover:bg-cyan-700 transition">
+                Contact
+            </a>
+        </div>
+    </nav>
 </template>
