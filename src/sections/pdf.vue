@@ -12,7 +12,7 @@
 
         <!-- PDF Viewer -->
         <div class="max-w-5xl mx-auto">
-            <iframe src="/images/PIC.pdf"
+            <iframe src="https://web.tecnico.ulisboa.pt/joao.simoes/NAVGUIDE/images/PIC.pdf"
                 class="w-full h-[500px] border-2 border-gray-300 shadow-lg rounded-lg"></iframe>
         </div>
     </section>
