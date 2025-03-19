@@ -1,7 +1,24 @@
 <script setup>
-import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+import { ref, onMounted } from 'vue';
+
 
 const isMenuOpen = ref(false);
+
+const router = useRouter();
+const mobileNav = ref(false);
+const scrollToSection = (id) => {
+    if (router.currentRoute.value.path !== "/") {
+        router.push('/').then(() => {
+            setTimeout(() => {
+                document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+            }, 300);
+        });
+    } else {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    }
+    mobileNav.value = false;
+};
 </script>
 
 <template>
@@ -11,14 +28,18 @@ const isMenuOpen = ref(false);
             <img src="/images/Logo NavGuide sem texto.png" alt="Logo" class="h-14 w-14" />
             <span class="text-lg font-bold text-cyan-700">NAVGUIDE</span>
         </div>
-    
+
         <!-- Desktop Menu -->
         <div class="hidden md:flex space-x-8">
-            <a href="#" class="text-cyan-600 font-medium">Home</a>
-            <a href="#" class="text-gray-500 hover:text-cyan-600 transition">What is NavGuide</a>
-            <a href="#" class="text-gray-500 hover:text-cyan-600 transition">Team</a>
-            <a href="#" class="text-gray-500 hover:text-cyan-600 transition">Partners</a>
-            
+            <router-link to="/" class="text-cyan-600 font-medium">Home</router-link>
+            <router-link to="/" @click.native="scrollToSection('pdf')"
+                class="text-gray-500 hover:text-cyan-600 transition">What
+                is NavGuide</router-link>
+            <router-link to="/" @click.native="scrollToSection('team')"
+                class="text-gray-500 hover:text-cyan-600 transition">Team</router-link>
+            <router-link to="/" @click.native="scrollToSection('partners')" class=" text-gray-500 hover:text-cyan-600
+                transition">Partners</router-link>
+
             <!-- Dropdown 
             <div class="relative group">
                 <button class="text-gray-500 hover:text-cyan-600 transition flex items-center">
@@ -35,7 +56,8 @@ const isMenuOpen = ref(false);
         </div>
 
         <!-- Blog -->
-        <a href="#" class="hidden md:block bg-cyan-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-cyan-700 transition">
+        <a href="#blog"
+            class="hidden md:block bg-cyan-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-cyan-700 transition">
             Blog
         </a>
 
@@ -47,15 +69,16 @@ const isMenuOpen = ref(false);
         </button>
 
         <!-- Mobile Menu -->
-        <div v-if="isMenuOpen" class="absolute top-16 left-0 w-full bg-white shadow-lg rounded-lg p-4 flex flex-col space-y-4 md:hidden">
-            <a href="#" class="text-cyan-600 font-medium">Home</a>
-            <a href="#" class="text-gray-500 hover:text-cyan-600 transition">About</a>
-            <a href="#" class="text-gray-500 hover:text-cyan-600 transition">Features</a>
-            <a href="#" class="text-gray-500 hover:text-cyan-600 transition">Pricing</a>
-            <a href="#" class="text-gray-500 hover:text-cyan-600 transition">Pages</a>
-            <a href="#" class="bg-cyan-600 text-white px-6 py-2 rounded-full text-center font-semibold hover:bg-cyan-700 transition">
-                Contact
-            </a>
+        <div v-if="isMenuOpen"
+            class="absolute top-16 left-0 w-full bg-white shadow-lg rounded-lg p-4 flex flex-col space-y-4 md:hidden">
+            <router-link to="/" class="text-cyan-600 font-medium">Home</router-link>
+            <router-link to="/" @click.native="scrollToSection('pdf')"
+                class="text-gray-500 hover:text-cyan-600 transition">What
+                is NavGuide</router-link>
+            <router-link to="/" @click.native="scrollToSection('team')"
+                class="text-gray-500 hover:text-cyan-600 transition">Team</router-link>
+            <router-link to="/" @click.native="scrollToSection('partners')" class=" text-gray-500 hover:text-cyan-600
+                transition">Partners</router-link>
         </div>
     </nav>
 </template>

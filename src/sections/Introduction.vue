@@ -10,41 +10,41 @@ const fullText = "Empowering visually impaired individuals with real-time naviga
 
 // Scroll function
 const scrollToSection = (id) => {
-    if (router.currentRoute.value.path !== "/") {
-        router.push('/').then(() => {
-            setTimeout(() => {
-                document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-            }, 300);
-        });
-    } else {
+  if (router.currentRoute.value.path !== "/") {
+    router.push('/').then(() => {
+      setTimeout(() => {
         document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-    }
-    mobileNav.value = false;
+      }, 300);
+    });
+  } else {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  }
+  mobileNav.value = false;
 };
 
 // Typewriter effect function
 const startTyping = () => {
-    let index = 0;
-    const interval = setInterval(() => {
-        if (index < fullText.length) {
-            typedText.value += fullText[index];
-            index++;
-        } else {
-            clearInterval(interval);
-            showButtons.value = true; // Show buttons after subtitle finishes typing
-        }
-    }, 30); // Adjust speed here (lower is faster)
+  let index = 0;
+  const interval = setInterval(() => {
+    if (index < fullText.length) {
+      typedText.value += fullText[index];
+      index++;
+    } else {
+      clearInterval(interval);
+      showButtons.value = true; // Show buttons after subtitle finishes typing
+    }
+  }, 30); // Adjust speed here (lower is faster)
 };
 
 // Start animations when component loads
 onMounted(() => {
-    startTyping();
+  startTyping();
 });
 </script>
 
 <template>
   <section id="intro" class="h-[80vh] flex flex-col items-center justify-center text-center bg-cyan-700 text-white">
-    
+
     <!-- Static Title -->
     <h1 class="text-5xl md:text-7xl font-extrabold uppercase">
       NAVGUIDE
@@ -58,11 +58,12 @@ onMounted(() => {
     <!-- Buttons Fade In After Typing Completes -->
     <transition name="fade-up" appear>
       <div v-if="showButtons" class="mt-8 flex space-x-4">
-        <a href="#" class="px-9 py-4 bg-white text-black text-xl font-medium rounded-lg hover:bg-cyan-900 hover:text-white transition">
-        Learn More
-        </a>
+        <router-link
+          class="px-9 py-4 bg-white text-black text-xl font-medium rounded-lg hover:bg-cyan-900 hover:text-white transition"
+          to="/" @click.native="scrollToSection('pdf')">Learn More</router-link>
 
-        <a href="#blog" class="px-6 py-4 border border-white text-white text-x1 font-medium rounded-lg hover:bg-white hover:text-black transition">
+        <a href="#blog"
+          class="px-9 py-4 border border-white text-white text-xl font-medium rounded-lg hover:bg-white hover:text-black transition">
           Blog
         </a>
       </div>
@@ -76,13 +77,14 @@ onMounted(() => {
 .fade-up-enter-active {
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
+
 .fade-up-enter-from {
   opacity: 0;
   transform: translateY(30px);
 }
+
 .fade-up-leave-to {
   opacity: 0;
   transform: translateY(-20px);
 }
 </style>
-

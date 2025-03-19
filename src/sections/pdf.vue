@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-gray-100 text-black py-20 px-6">
+    <section id="pdf" class="bg-gray-100 text-black py-20 px-6">
         <div class="max-w-6xl mx-auto text-center">
             <!-- Title -->
             <h2 class="text-3xl md:text-5xl font-bold text-black mb-6 uppercase">

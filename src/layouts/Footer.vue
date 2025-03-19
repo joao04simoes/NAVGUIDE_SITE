@@ -5,7 +5,7 @@ const year = ref(new Date().getFullYear());
 
 <template>
     <!-- Footer Start -->
-    <footer class="bg-theme-dark-blue py-10 text-white">
+    <footer class="bg-cyan-700 py-10 text-white">
         <div class="container mx-auto px-5">
             <div class="grid md:grid-cols-3 gap-8 text-center md:text-left justify-center">
                 <!-- Logo / Nome do Projeto - Centralizado -->
