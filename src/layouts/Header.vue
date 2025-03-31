@@ -26,7 +26,7 @@ const scrollToSection = (id) => {
         <!-- Logo -->
         <div class="flex items-center space-x-2">
             <img src="/images/Logo NavGuide sem texto.png" alt="Logo" class="h-14 w-14" />
-            <span class="text-lg font-bold text-cyan-700">NAVGUIDE</span>
+            <span class="text-lg font-bold text-cyan-600">NAVGUIDE</span>
         </div>
 
         <!-- Desktop Menu -->
@@ -40,19 +40,7 @@ const scrollToSection = (id) => {
             <router-link to="/" @click.native="scrollToSection('partners')" class=" text-gray-500 hover:text-cyan-600
                 transition">Partners</router-link>
 
-            <!-- Dropdown 
-            <div class="relative group">
-                <button class="text-gray-500 hover:text-cyan-600 transition flex items-center">
-                    Pages
-                    <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                    </svg>
-                </button>
-                <div class="absolute hidden group-hover:block bg-white shadow-md rounded-lg mt-2 w-36 py-2">
-                    <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Page 1</a>
-                    <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Page 2</a>
-                </div>
-            </div>-->
+
         </div>
 
         <!-- Blog -->

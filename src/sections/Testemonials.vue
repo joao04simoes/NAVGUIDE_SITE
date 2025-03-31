@@ -27,7 +27,7 @@ let intervalId = null;
 const startAutoScroll = () => {
   intervalId = setInterval(() => {
     activeIndex.value = (activeIndex.value + 1) % testimonials.value.length;
-  }, 4000); // Change every 5s
+  }, 6000);
 };
 
 // Stop auto-scroll when manually clicked

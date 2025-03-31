@@ -7,19 +7,19 @@ const features = ref([
     id: 0,
     title: "Ultra-Wideband (UWB) technology",
     desc: "UWB enables real-time, high-precision indoor navigation, providing accurate positioning for visually impaired individuals.",
-    image: "https://web.tecnico.ulisboa.pt/joao.simoes/NAVGUIDE/images/UWB_arte.png"
+    image: "/joao.simoes/NAVGUIDE/images/UWB_arte.png"
   },
   {
     id: 1,
     title: "Voice-Guided Navigation",
     desc: "Step-by-step voice instructions help users locate products and navigate supermarket aisles independently.",
-    image: "https://web.tecnico.ulisboa.pt/joao.simoes/NAVGUIDE/images/voice.png"
+    image: "/joao.simoes/NAVGUIDE/images/voice.png"
   },
   {
     id: 2,
     title: "Mobile App",
     desc: "A user-friendly app designed for accessibility, integrating UWB positioning and supermarket mapping to enhance the shopping experience.",
-    image: "https://web.tecnico.ulisboa.pt/joao.simoes/NAVGUIDE/images/MobileApp.png"
+    image: "/joao.simoes/NAVGUIDE/images/MobileApp.png"
   },
 ]);
 
@@ -88,12 +88,10 @@ onMounted(() => {
     </div>
     <!-- Button to Learn More -->
     <div class="text-center mt-12">
-    <a
-      href="/technology"
-      class="inline-block bg-cyan-700 text-white font-semibold px-8 py-3 rounded-full shadow hover:bg-cyan-800 transition"
-      >
-      Learn More About Our Technology
-    </a>
+      <a href="/technology"
+        class="inline-block bg-cyan-700 text-white font-semibold px-8 py-3 rounded-full shadow hover:bg-cyan-800 transition">
+        Learn More About Our Technology
+      </a>
     </div>
   </section>
 </template>
