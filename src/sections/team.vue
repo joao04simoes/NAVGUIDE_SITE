@@ -33,7 +33,7 @@ const teamMembers = ref([
     role: "Position & Localization",
     bio: "Specializes in real-time positioning and localization technologies, optimizing accuracy for indoor navigation.",
     photo: "/joao.simoes/NAVGUIDE/images/afonsoribeiro.jpg",
-    linkedin: "https://www.linkedin.com/in/joaosimoes",
+    linkedin: "https://www.linkedin.com/",
   },
   {
     id: 5,
@@ -49,7 +49,7 @@ const teamMembers = ref([
     role: "Tests & Metrics",
     bio: "Ensures system reliability, performance analysis, and accuracy of data processing through rigorous testing and validation.",
     photo: "/joao.simoes/NAVGUIDE/images/filipacunha.jpg",
-    linkedin: "https://www.linkedin.com/in/filipacunha",
+    linkedin: "https://www.linkedin.com/",
   },
 ]);
 </script>
@@ -72,7 +72,7 @@ const teamMembers = ref([
           <!-- Image with Hover Effect -->
           <div class="relative group">
             <img :src="member.photo"
-              class="w-full h-48 object-cover transition-opacity duration-300 group-hover:opacity-70"
+              class="w-full h-48 object-cover object-[15%_30%] transition-opacity duration-300 group-hover:opacity-70"
               alt="Team Member" />
             <!-- LinkedIn Button Appears on Hover -->
             <a :href="member.linkedin" target="_blank"

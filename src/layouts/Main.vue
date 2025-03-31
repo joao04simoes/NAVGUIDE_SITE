@@ -8,13 +8,13 @@ import Technology from "../sections/Technology.vue";
 import Beneficiaries from "../sections/Beneficiaries.vue";
 import team from "../sections/team.vue";
 import Partners from "../sections/Partners.vue";
-import Header from "./Header.vue";
-import Footer from "./Footer.vue";
+
+
 import pdf from "../sections/pdf.vue";
 </script>
 
 <template>
-    <Header />
+
     <div class="py-2"></div>
     <Intro />
     <Description />
@@ -28,8 +28,6 @@ import pdf from "../sections/pdf.vue";
     <team />
     <Partners />
 
-    <Footer />
+
 
 </template>
-
-

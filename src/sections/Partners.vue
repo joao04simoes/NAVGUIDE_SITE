@@ -1,12 +1,28 @@
 <script setup>
 import { ref } from "vue";
 
-const images = ref([
-  "/joao.simoes/NAVGUIDE/images/logo_ist.png",
-  "/joao.simoes/NAVGUIDE/images/logo_auchan.png",
-  "/joao.simoes/NAVGUIDE/images/apec_logo.jpg",
-  "/joao.simoes/NAVGUIDE/images/bengalamágica_logo2.png",
+const partners = ref([
+  {
+    image: "/joao.simoes/NAVGUIDE/images/logo_ist.png",
+    website: "https://tecnico.ulisboa.pt/pt/",
+  },
+  {
+    image: "/joao.simoes/NAVGUIDE/images/logo_auchan.png",
+    website: "https://www.auchan.pt/",
+  },
+  {
+    image: "/joao.simoes/NAVGUIDE/images/apec_logo.jpg",
+    website: "https://www.apec.org.pt/",
+  },
+  {
+    image: "/joao.simoes/NAVGUIDE/images/bengalamágica_logo2.png",
+    website: "https://www.bengalamagica.pt/",
+  }
 ]);
+
+const directToPartner = (url) => {
+  window.open(url, "_blank"); // Abre numa nova aba
+};
 </script>
 
 <template>
@@ -20,8 +36,8 @@ const images = ref([
     <div class="marquee">
       <div class="marquee-inner">
         <!-- Repeat logos enough times to prevent cutting -->
-        <div v-for="(image, index) in [...images, ...images, ...images]" :key="index" class="marquee-item">
-          <img :src="image" class="logo-img" />
+        <div v-for="(partner, index) in [...partners, ...partners, ...partners]" :key="index" class="marquee-item">
+          <img :src="partner.image" @click="directToPartner(partner.website)" class="logo-img cursor-pointer" />
         </div>
       </div>
     </div>
