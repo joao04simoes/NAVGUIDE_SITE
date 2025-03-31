@@ -45,7 +45,7 @@ onMounted(() => {
 <template>
   <section id="testimonials" class="bg-gray-100 text-black py-20 px-6">
     <div class="container mx-auto text-center">
-      
+
       <!-- Section Title -->
       <h2 class="text-4xl md:text-5xl font-bold mb-6 uppercase">
         What People Are Saying
@@ -62,15 +62,11 @@ onMounted(() => {
 
       <!-- Navigation Dots -->
       <div class="mt-6 flex justify-center space-x-2">
-        <span 
-          v-for="(testimonial, index) in testimonials" 
-          :key="index" 
-          @click="setActiveTestimonial(index)" 
+        <span v-for="(testimonial, index) in testimonials" :key="index" @click="setActiveTestimonial(index)"
           class="w-3 h-3 rounded-full cursor-pointer transition-all"
-          :class="index === activeIndex ? 'bg-[#164e63] w-4 h-4' : 'bg-gray-400'"
-        ></span>
+          :class="index === activeIndex ? 'bg-[#164e63] w-4 h-4' : 'bg-gray-400'"></span>
       </div>
-      
+
     </div>
   </section>
 </template>

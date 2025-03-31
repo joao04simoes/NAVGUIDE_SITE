@@ -16,7 +16,7 @@ const teamMembers = ref([
     name: "João Simões",
     role: "Sensors",
     bio: "Works on sensor selection, integration, and optimization to ensure accurate data collection for navigation and tracking.",
-    photo: "/images/tondela.jpg",
+    photo: "/joao.simoes/NAVGUIDE/images/tondela.jpg",
     linkedin: "https://www.linkedin.com/in/jo%C3%A3o-04-sim%C3%B5es/",
   },
   {
@@ -59,30 +59,26 @@ const teamMembers = ref([
     <div class="container mx-auto text-center">
       <h2 class="text-6xl font-bold text-black mb-6 uppercase">Meet Our Team</h2>
       <p class="text-lg text-gray-600 mb-10 max-w-5xl mx-auto">
-        United by a shared vision of inclusivity, our team is dedicated to transforming the supermarket experience for visually impaired individuals. Through cutting-edge technology and a deep commitment to accessibility, we strive to create a seamless, independent, and empowering way for everyone to navigate their surroundings with confidence.
+        United by a shared vision of inclusivity, our team is dedicated to transforming the supermarket experience for
+        visually impaired individuals. Through cutting-edge technology and a deep commitment to accessibility, we strive
+        to create a seamless, independent, and empowering way for everyone to navigate their surroundings with
+        confidence.
       </p>
 
       <!-- Grid Layout for 6 Team Members -->
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div 
-          v-for="member in teamMembers" 
-          :key="member.id" 
-          class="relative bg-white shadow-md rounded-lg overflow-hidden transform transition duration-500 hover:scale-105 w-80 mx-auto"
-        >
+        <div v-for="member in teamMembers" :key="member.id"
+          class="relative bg-white shadow-md rounded-lg overflow-hidden transform transition duration-500 hover:scale-105 w-80 mx-auto">
           <!-- Image with Hover Effect -->
           <div class="relative group">
-            <img 
-              :src="member.photo" 
+            <img :src="member.photo"
               class="w-full h-48 object-cover transition-opacity duration-300 group-hover:opacity-70"
-              alt="Team Member"
-            />
+              alt="Team Member" />
             <!-- LinkedIn Button Appears on Hover -->
-            <a 
-              :href="member.linkedin" 
-              target="_blank" 
-              class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            >
-              <button class="bg-white text-blue-700 px-3 py-2 text-sm rounded-full font-semibold hover:bg-blue-700 hover:text-white transition">
+            <a :href="member.linkedin" target="_blank"
+              class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <button
+                class="bg-white text-blue-700 px-3 py-2 text-sm rounded-full font-semibold hover:bg-blue-700 hover:text-white transition">
                 LinkedIn
               </button>
             </a>
@@ -106,4 +102,3 @@ const teamMembers = ref([
   transition: opacity 0.3s ease-in-out;
 }
 </style>
-
