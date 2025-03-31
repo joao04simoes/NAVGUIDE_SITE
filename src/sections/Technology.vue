@@ -82,9 +82,18 @@ onMounted(() => {
           <div class="absolute left-0 h-1 bg-[#164e63] transition-all"
             :style="{ width: index === activeIndex ? '100%' : '0%', transitionDuration: '4s' }"></div>
 
-          <hr class="border-gray-600 mt-4">
+          <hr class="border-gray-600 mt-5">
         </div>
       </div>
+    </div>
+    <!-- Button to Learn More -->
+    <div class="text-center mt-12">
+    <a
+      href="/technology"
+      class="inline-block bg-cyan-700 text-white font-semibold px-8 py-3 rounded-full shadow hover:bg-cyan-800 transition"
+      >
+      Learn More About Our Technology
+    </a>
     </div>
   </section>
 </template>

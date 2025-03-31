@@ -6,7 +6,7 @@ const router = useRouter();
 const mobileNav = ref(false);
 const showButtons = ref(false);
 const typedText = ref(""); // For typewriter effect
-const fullText = "Empowering visually impaired individuals with real-time navigation in supermarkets"; // Subtitle text
+const fullText = "Empowering visually impaired individuals with real-time navigation in supermarkets."; // Subtitle text
 
 // Scroll function
 const scrollToSection = (id) => {
@@ -33,7 +33,7 @@ const startTyping = () => {
       clearInterval(interval);
       showButtons.value = true; // Show buttons after subtitle finishes typing
     }
-  }, 30); // Adjust speed here (lower is faster)
+  }, 25); // Adjust speed here (lower is faster)
 };
 
 // Start animations when component loads
@@ -59,11 +59,11 @@ onMounted(() => {
     <transition name="fade-up" appear>
       <div v-if="showButtons" class="mt-8 flex space-x-4">
         <router-link
-          class="px-9 py-4 bg-white text-black text-xl font-medium rounded-lg hover:bg-cyan-900 hover:text-white transition"
+          class="px-9 py-4 bg-white border-white text-black text-xl font-medium rounded-lg hover:bg-cyan-900 hover:text-white transition"
           to="/" @click.native="scrollToSection('pdf')">Learn More</router-link>
 
         <a href="#blog"
-          class="px-9 py-4 border border-white text-white text-xl font-medium rounded-lg hover:bg-white hover:text-black transition">
+          class="px-9 py-4 border border-white text-white text-xl font-medium rounded-lg hover:bg-cyan-900 hover:text-black transition">
           Blog
         </a>
       </div>

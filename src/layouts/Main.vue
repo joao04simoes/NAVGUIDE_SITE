@@ -7,6 +7,7 @@ import Wecomein from "../sections/Wecomein.vue";
 import Technology from "../sections/Technology.vue";
 import Beneficiaries from "../sections/Beneficiaries.vue";
 import team from "../sections/team.vue";
+import Partners from "../sections/Partners.vue";
 import Header from "./Header.vue";
 import Footer from "./Footer.vue";
 import pdf from "../sections/pdf.vue";
@@ -25,6 +26,7 @@ import pdf from "../sections/pdf.vue";
     <pdf />
 
     <team />
+    <Partners />
 
     <Footer />
 
