@@ -2,10 +2,10 @@
 import { ref } from "vue";
 
 const images = ref([
-  "/images/logo_ist.png",
-  "/images/logo_auchan.png",
-  "/images/apec_logo.jpg",
-  "/images/bengalamágica_logo2.png",
+  "/joao.simoes/NAVGUIDE/images/logo_ist.png",
+  "/joao.simoes/NAVGUIDE/images/logo_auchan.png",
+  "/joao.simoes/NAVGUIDE/images/apec_logo.jpg",
+  "/joao.simoes/NAVGUIDE/images/bengalamágica_logo2.png",
 ]);
 </script>
 
@@ -20,11 +20,7 @@ const images = ref([
     <div class="marquee">
       <div class="marquee-inner">
         <!-- Repeat logos enough times to prevent cutting -->
-        <div
-          v-for="(image, index) in [...images, ...images, ...images]"
-          :key="index"
-          class="marquee-item"
-        >
+        <div v-for="(image, index) in [...images, ...images, ...images]" :key="index" class="marquee-item">
           <img :src="image" class="logo-img" />
         </div>
       </div>
@@ -65,6 +61,7 @@ const images = ref([
   0% {
     transform: translateX(0%);
   }
+
   100% {
     transform: translateX(-33.333%);
   }

@@ -8,7 +8,7 @@ const teamMembers = ref([
     name: "Sofia Vicente",
     role: "Partnerships & Documentation",
     bio: "Manages external collaborations, sponsorships, and partnerships while ensuring the website, comprehensive documentation and reporting for the project.",
-    photo: "/images/IMG_5071.JPG",
+    photo: "/joao.simoes/NAVGUIDE/images/IMG_5071.JPG",
     linkedin: "https://www.linkedin.com/in/sofiacvicente/",
   },
   {
@@ -24,7 +24,7 @@ const teamMembers = ref([
     name: "Ana Cláudia Vilela",
     role: "Website",
     bio: "Responsible for maintaining the project’s website updated for accessibility and user interaction.",
-    photo: "/images/anaclaudia.JPG",
+    photo: "/joao.simoes/NAVGUIDE/images/anaclaudia.JPG",
     linkedin: "https://www.linkedin.com/in/ana-cl%C3%A1udia-vilela-20207a234/",
   },
   {
@@ -32,7 +32,7 @@ const teamMembers = ref([
     name: "Afonso Ribeiro",
     role: "Position & Localization",
     bio: "Specializes in real-time positioning and localization technologies, optimizing accuracy for indoor navigation.",
-    photo: "/images/afonsoribeiro.jpg",
+    photo: "/joao.simoes/NAVGUIDE/images/afonsoribeiro.jpg",
     linkedin: "https://www.linkedin.com/in/joaosimoes",
   },
   {
@@ -40,7 +40,7 @@ const teamMembers = ref([
     name: "Tomás Almeida",
     role: "Mobile Application",
     bio: "Focuses on the development, UI/UX, and backend integration of the mobile app for a seamless user experience.",
-    photo: "/images/tomasalmeida.jpg",
+    photo: "/joao.simoes/NAVGUIDE/images/tomasalmeida.jpg",
     linkedin: "https://www.linkedin.com/in/tomasalmeida",
   },
   {
@@ -48,7 +48,7 @@ const teamMembers = ref([
     name: "Filipa Cunha",
     role: "Tests & Metrics",
     bio: "Ensures system reliability, performance analysis, and accuracy of data processing through rigorous testing and validation.",
-    photo: "/images/filipacunha.jpg",
+    photo: "/joao.simoes/NAVGUIDE/images/filipacunha.jpg",
     linkedin: "https://www.linkedin.com/in/filipacunha",
   },
 ]);
