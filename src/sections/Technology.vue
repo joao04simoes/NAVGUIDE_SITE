@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted } from "vue";
+import { useRouter } from 'vue-router';
 
 // Feature data with descriptions
 const features = ref([
@@ -43,6 +44,26 @@ const setActiveFeature = (index) => {
 onMounted(() => {
   startAutoSwitch();
 });
+
+const router = useRouter();
+const mobileNav = ref(false);
+
+const scrollToSection = (id) => {
+  const targetElement = document.getElementById(id);
+
+  if (targetElement) {
+    targetElement.scrollIntoView({ behavior: 'smooth' });
+  } else {
+    // If the element doesn't exist, maybe navigate to the page where it exists
+    router.push('/technology').then(() => {
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+      }, 300);
+    });
+  }
+
+  mobileNav.value = false;
+};
 </script>
 
 <template>
@@ -88,7 +109,7 @@ onMounted(() => {
     </div>
     <!-- Button to Learn More -->
     <div class="text-center mt-12">
-      <a href="/technology"
+      <a href="#technology" @click.prevent="scrollToSection('maintec')"
         class="inline-block bg-cyan-700 text-white font-semibold px-8 py-3 rounded-full shadow hover:bg-cyan-800 transition">
         Learn More About Our Technology
       </a>

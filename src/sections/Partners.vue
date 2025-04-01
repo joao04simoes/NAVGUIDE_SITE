@@ -33,7 +33,7 @@ const directToPartner = (url) => {
       </h2>
     </div>
 
-    <div class="marquee">
+    <div id="partners" class="marquee">
       <div class="marquee-inner">
         <!-- Repeat logos enough times to prevent cutting -->
         <div v-for="(partner, index) in [...partners, ...partners, ...partners]" :key="index" class="marquee-item">
