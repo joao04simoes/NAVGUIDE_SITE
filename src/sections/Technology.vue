@@ -62,10 +62,14 @@ const scrollToSection = (id) => {
 </script>
 
 <template>
-  <section class="bg-gray-100 text-black py-20 px-6">
-    <h2 id="tecSol" class="text-5xl font-bold text-center mb-6 uppercase mx-auto">
+
+  <section class="bg-gray-100 text-black pt-20">
+    <h2 id="tecSol" class="text-5xl font-bold text-center uppercase mx-auto">
       Technological Solution
     </h2>
+  </section>
+  <section class="bg-gray-100 text-black pt-6 pb-20 px-6">
+
     <p class="text-center text-black-500 mb-10 max-w-5xl mx-auto">
       NavGuide uses UWB technology, voice-guided navigation, and a smart mobile app
       to make supermarkets more accessible for visually impaired individuals, providing real-time tracking
