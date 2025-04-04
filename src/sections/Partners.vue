@@ -31,14 +31,14 @@ const directToPartner = (url) => {
 </script>
 
 <template>
-  <section class="bg-gray-100  py-10 overflow-hidden">
+  <section id="partners" class="bg-gray-100  py-10 overflow-hidden">
     <div class="container mx-auto text-center mb-6">
       <h2 class="text-6xl font-bold text-black mb-12 uppercase">
         Our Partners
       </h2>
     </div>
 
-    <div id="partners" class="marquee">
+    <div class="marquee">
       <div class="marquee-inner">
         <!-- Repeat logos enough times to prevent cutting -->
         <div v-for="(partner, index) in [...partners, ...partners, ...partners]" :key="index" class="marquee-item">
