@@ -31,7 +31,7 @@ const solutions = ref([
 </script>
 
 <template>
-  <div id="tecSol" class="bg-white text-white py-20 px-6">
+  <div id="tecSol" class="bg-gray-100 text-white py-20 px-6">
     <div class="container mx-auto text-center">
       <!-- Section Title -->
       <h2 class="text-4xl md:text-5xl text-black font-bold mb-10 uppercase">

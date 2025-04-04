@@ -8,9 +8,8 @@ import Technology from "../sections/Technology.vue";
 import Beneficiaries from "../sections/Beneficiaries.vue";
 import team from "../sections/team.vue";
 import Partners from "../sections/Partners.vue";
-
-
 import pdf from "../sections/pdf.vue";
+
 </script>
 
 <template>
@@ -24,9 +23,8 @@ import pdf from "../sections/pdf.vue";
     <Technology />
     <Beneficiaries />
     <pdf />
-
-    <team />
     <Partners />
+    <team />
 
 
 

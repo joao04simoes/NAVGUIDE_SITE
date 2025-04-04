@@ -47,12 +47,12 @@ onMounted(() => {
     <div class="container mx-auto text-center">
 
       <!-- Section Title -->
-      <h2 class="text-4xl md:text-5xl font-bold mb-6 uppercase">
+      <h2 class="text-4xl md:text-5xl font-bold mb-9 uppercase">
         What People Are Saying
       </h2>
 
       <!-- Testimonial Card -->
-      <div class="max-w-4xl mx-auto bg-white shadow-xl rounded-lg p-8 transition-all duration-500">
+      <div class="max-w-4xl mx-auto bg-gray-200 shadow-xl rounded-lg p-8 transition-all duration-500">
         <p class="text-xl font-semibold text-[#164e63]">
           "{{ testimonials[activeIndex].quote }}"
         </p>

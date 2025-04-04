@@ -12,7 +12,7 @@ useIntersectionObserver(sectionRef, ([{ isIntersecting }]) => {
 </script>
 
 <template>
-  <div ref="sectionRef" class="bg-white text-black py-20 px-6 md:px-16">
+  <div ref="sectionRef" class="bg-gray-100 text-black py-20 px-6 md:px-16">
     <div class="container mx-auto text-center">
       <!-- Animated Heading -->
       <h1

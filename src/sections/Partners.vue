@@ -17,7 +17,12 @@ const partners = ref([
   {
     image: "/joao.simoes/NAVGUIDE/images/bengalamágica_logo2.png",
     website: "https://www.bengalamagica.pt/",
+  },
+  {
+    image: "/joao.simoes/NAVGUIDE/images/APD logo.png",
+    website: "https://www.apd.org.pt/",
   }
+  
 ]);
 
 const directToPartner = (url) => {
@@ -26,9 +31,9 @@ const directToPartner = (url) => {
 </script>
 
 <template>
-  <section class="bg-white py-10 overflow-hidden">
+  <section class="bg-gray-100 mb-16 py-10 overflow-hidden">
     <div class="container mx-auto text-center mb-6">
-      <h2 class="text-4xl md:text-5xl text-black font-bold uppercase mb-4">
+      <h2 class="text-6xl font-bold text-black mb-12 uppercase">
         Our Partners
       </h2>
     </div>

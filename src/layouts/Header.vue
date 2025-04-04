@@ -33,19 +33,20 @@ const scrollToSection = (id) => {
         <div class="hidden md:flex space-x-8">
             <router-link to="/" class="text-cyan-600 font-medium">Home</router-link>
             <router-link to="/" @click.native="scrollToSection('pdf')"
-                class="text-gray-500 hover:text-cyan-600 transition">What
-                is NavGuide</router-link>
+                class="text-gray-500 hover:text-cyan-600 transition">What is NavGuide</router-link>
+            <router-link to="/" @click.native="scrollToSection('technology')" 
+                class=" text-gray-500 hover:text-cyan-600 transition">Technology</router-link>
             <router-link to="/" @click.native="scrollToSection('team')"
                 class="text-gray-500 hover:text-cyan-600 transition">Team</router-link>
-            <router-link to="/" @click.native="scrollToSection('partners')" class=" text-gray-500 hover:text-cyan-600
-                transition">Partners</router-link>
+            <router-link to="/" @click.native="scrollToSection('partners')" 
+                class=" text-gray-500 hover:text-cyan-600 transition">Partners</router-link>
 
 
         </div>
 
         <!-- Blog -->
         <a href="#blog"
-            class="hidden md:block bg-cyan-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-cyan-700 transition">
+            class="hidden md:block bg-cyan-800 text-white px-6 py-2 rounded-full font-semibold hover:bg-white hover:text-black transition">
             Blog
         </a>
 
@@ -61,12 +62,13 @@ const scrollToSection = (id) => {
             class="absolute top-16 left-0 w-full bg-white shadow-lg rounded-lg p-4 flex flex-col space-y-4 md:hidden">
             <router-link to="/" class="text-cyan-600 font-medium">Home</router-link>
             <router-link to="/" @click.native="scrollToSection('pdf')"
-                class="text-gray-500 hover:text-cyan-600 transition">What
-                is NavGuide</router-link>
+                class="text-gray-500 hover:text-cyan-600 transition">What is NavGuide</router-link>
+            <router-link to="/" @click.native="scrollToSection('technology')" 
+                class=" text-gray-500 hover:text-cyan-600 transition">Technology</router-link>
             <router-link to="/" @click.native="scrollToSection('team')"
                 class="text-gray-500 hover:text-cyan-600 transition">Team</router-link>
-            <router-link to="/" @click.native="scrollToSection('partners')" class=" text-gray-500 hover:text-cyan-600
-                transition">Partners</router-link>
+            <router-link to="/" @click.native="scrollToSection('partners')" 
+                class=" text-gray-500 hover:text-cyan-600 transition">Partners</router-link>
         </div>
     </nav>
 </template>

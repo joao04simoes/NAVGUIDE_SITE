@@ -27,7 +27,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="bg-white text-white font-regular py-20 px-6 text-center">
+  <section class="bg-gray-100 text-white font-regular py-20 px-6 text-center">
     <!-- Title for the section -->
     <h2 class="text-3xl md:text-6xl font-bold text-black mb-10 uppercase">
       How Big is the Problem?

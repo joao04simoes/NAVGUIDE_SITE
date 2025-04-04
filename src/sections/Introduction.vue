@@ -59,11 +59,11 @@ onMounted(() => {
     <transition name="fade-up" appear>
       <div v-if="showButtons" class="mt-8 flex space-x-4">
         <router-link
-          class="px-9 py-4 bg-white border-white text-black text-xl font-medium rounded-lg hover:bg-cyan-900 hover:text-white transition"
+          class="px-8 py-4 bg-cyan-900 border-white text-white text-xl font-medium rounded-full hover:bg-white hover:text-black transition"
           to="/" @click.native="scrollToSection('pdf')">Learn More</router-link>
 
         <a href="#blog"
-          class="px-9 py-4 border border-white text-white text-xl font-medium rounded-lg hover:bg-cyan-900 hover:text-black transition">
+          class="px-9 py-4 border border-white text-white text-xl font-medium rounded-full hover:bg-white hover:text-black transition">
           Blog
         </a>
       </div>
