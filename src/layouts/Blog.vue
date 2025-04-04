@@ -1,5 +1,6 @@
 <template>
-  <div class="bg-gray-100 min-h-screen pt-2 flex flex-col">
+  <div class="py-2"></div>
+  <div class="bg-gray-100 min-h-screen flex flex-col">
     <!-- Main Content -->
     <main class="flex-grow">
       <div class="container mx-auto py-16 px-6">
