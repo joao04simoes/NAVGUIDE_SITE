@@ -12,8 +12,7 @@ const sections = ref([
         points: [
           "4 fixed UWB modules for triangulation reference.",
           "1 mobile UWB module to measure distance to fixed anchors via UWB signals.",
-          "5 batteries for powering the modules.",
-          "5 ESP32 modules (Mauser 096-7620) for communication handling."
+          "5 batteries for powering the modules."
         ]
       },
       {
@@ -65,7 +64,7 @@ const sections = ref([
 </script>
 
 <template>
-  <div id="maintec " class="py-2"></div>
+  <div class="py-2"></div>
 
   <!-- Introductory Box -->
   <section class="bg-cyan-700 py-10 px-6 text-white">

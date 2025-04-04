@@ -22,7 +22,7 @@ const partners = ref([
     image: "/joao.simoes/NAVGUIDE/images/APD logo.png",
     website: "https://www.apd.org.pt/",
   }
-  
+
 ]);
 
 const directToPartner = (url) => {
@@ -31,7 +31,7 @@ const directToPartner = (url) => {
 </script>
 
 <template>
-  <section class="bg-gray-100 mb-16 py-10 overflow-hidden">
+  <section class="bg-gray-100  py-10 overflow-hidden">
     <div class="container mx-auto text-center mb-6">
       <h2 class="text-6xl font-bold text-black mb-12 uppercase">
         Our Partners

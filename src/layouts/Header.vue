@@ -22,7 +22,8 @@ const scrollToSection = (id) => {
 </script>
 
 <template>
-    <nav class="bg-white shadow-lg rounded-full mx-auto mt-6 max-w-6xl px-6 py-3 flex justify-between items-center">
+    <nav id="maintec"
+        class="bg-white shadow-lg rounded-full mx-auto mt-6 max-w-6xl px-6 py-3 flex justify-between items-center">
         <!-- Logo -->
         <div class="flex items-center space-x-2">
             <img src="/images/Logo NavGuide sem texto.png" alt="Logo" class="h-14 w-14" />
