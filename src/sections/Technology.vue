@@ -68,7 +68,7 @@ const scrollToSection = (id) => {
       Technological Solution
     </h2>
   </section>
-  <section class="bg-gray-100 text-black pt-6 pb-20 px-6">
+  <section class="bg-gray-100 text-black pt-6 pb-14 px-6">
 
     <p class="text-center text-black-500 mb-10 max-w-5xl mx-auto">
       NavGuide uses UWB technology, voice-guided navigation, and a smart mobile app

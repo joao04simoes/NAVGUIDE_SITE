@@ -40,30 +40,21 @@ const solutions = ref([
 
       <!-- Cards Container -->
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div v-for="solution in solutions" :key="solution.id" class="group [perspective:1000px] h-64">
-          <!-- Card Inner Wrapper -->
-          <div class="relative w-full h-full transition-transform duration-500"
-            style="-webkit-transform-style: preserve-3d; transform-style: preserve-3d;"
-            :class="{ 'group-hover:rotate-y-180': true }">
+        <div v-for="solution in solutions" :key="solution.id" class="group perspective h-64">
+          <!-- Card Inner -->
+          <div class="relative w-full h-full transition-transform duration-500 preserve-3d group-hover:rotate-y-180">
             <!-- Front Face -->
-            <div class="absolute inset-0 bg-cyan-700 rounded-xl flex items-center justify-center px-4 text-center"
-              style="-webkit-backface-visibility: hidden; backface-visibility: hidden;">
-              <h3 class="text-2xl font-semibold">
-                {{ solution.title }}
-              </h3>
+            <div
+              class="absolute inset-0 bg-cyan-700 rounded-xl flex items-center justify-center px-4 text-center text-white"
+              style="backface-visibility: hidden; -webkit-backface-visibility: hidden;">
+              <h3 class="text-2xl font-semibold">{{ solution.title }}</h3>
             </div>
 
             <!-- Back Face -->
-            <div class="absolute inset-0 bg-cyan-900 rounded-xl px-6 py-4 flex items-center justify-center text-center"
-              style="
-                -webkit-backface-visibility: hidden;
-                backface-visibility: hidden;
-                -webkit-transform: rotateY(180deg);
-                transform: rotateY(180deg);
-              ">
-              <p class="text-base text-white opacity-90">
-                {{ solution.description }}
-              </p>
+            <div
+              class="absolute inset-0 bg-cyan-900 rounded-xl px-6 py-4 flex items-center justify-center text-center text-white"
+              style="transform: rotateY(180deg); -webkit-transform: rotateY(180deg); backface-visibility: hidden; -webkit-backface-visibility: hidden;">
+              <p class="text-base opacity-90">{{ solution.description }}</p>
             </div>
           </div>
         </div>
@@ -72,9 +63,21 @@ const solutions = ref([
   </div>
 </template>
 
-<style scoped>
-/* Add global styles to fix iOS Safari rotation issues */
-.group:hover>div {
+<style>
+/* Required for 3D effect */
+.perspective {
+  perspective: 1000px;
+}
+
+/* Flip behavior */
+.preserve-3d {
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Rotation on hover */
+.group:hover .group-hover\:rotate-y-180 {
   transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
 }
