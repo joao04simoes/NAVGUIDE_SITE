@@ -35,26 +35,32 @@ const solutions = ref([
     <div class="container mx-auto text-center">
       <!-- Section Title -->
       <h2 class="text-4xl md:text-5xl text-black font-bold mb-10 uppercase">
-        who will benefit from our project
+        Who will benefit from our project
       </h2>
 
       <!-- Cards Container -->
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
         <div v-for="solution in solutions" :key="solution.id" class="group [perspective:1000px] h-64">
-          <!-- Card Wrapper -->
-          <div
-            class="relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-            <!-- Front -->
-            <div
-              class="absolute inset-0 bg-cyan-700 rounded-xl flex items-center justify-center px-4 text-center [backface-visibility:hidden]">
+          <!-- Card Inner Wrapper -->
+          <div class="relative w-full h-full transition-transform duration-500"
+            style="-webkit-transform-style: preserve-3d; transform-style: preserve-3d;"
+            :class="{ 'group-hover:rotate-y-180': true }">
+            <!-- Front Face -->
+            <div class="absolute inset-0 bg-cyan-700 rounded-xl flex items-center justify-center px-4 text-center"
+              style="-webkit-backface-visibility: hidden; backface-visibility: hidden;">
               <h3 class="text-2xl font-semibold">
                 {{ solution.title }}
               </h3>
             </div>
 
-            <!-- Back -->
-            <div
-              class="absolute inset-0 bg-cyan-900 rounded-xl px-6 py-4 flex items-center justify-center text-center [transform:rotateY(180deg)] [backface-visibility:hidden]">
+            <!-- Back Face -->
+            <div class="absolute inset-0 bg-cyan-900 rounded-xl px-6 py-4 flex items-center justify-center text-center"
+              style="
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                -webkit-transform: rotateY(180deg);
+                transform: rotateY(180deg);
+              ">
               <p class="text-base text-white opacity-90">
                 {{ solution.description }}
               </p>
@@ -65,3 +71,11 @@ const solutions = ref([
     </div>
   </div>
 </template>
+
+<style scoped>
+/* Add global styles to fix iOS Safari rotation issues */
+.group:hover>div {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+</style>
