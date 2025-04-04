@@ -49,18 +49,13 @@ const router = useRouter();
 const mobileNav = ref(false);
 
 const scrollToSection = (id) => {
-  const targetElement = document.getElementById(id);
 
-  if (targetElement) {
-    targetElement.scrollIntoView({ behavior: 'smooth' });
-  } else {
-    // If the element doesn't exist, maybe navigate to the page where it exists
-    router.push('/technology').then(() => {
-      setTimeout(() => {
-        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-      }, 300);
-    });
-  }
+  router.push('/technology').then(() => {
+    setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    }, 300);
+  });
+
 
   mobileNav.value = false;
 };
