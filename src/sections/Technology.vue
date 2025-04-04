@@ -68,7 +68,7 @@ const scrollToSection = (id) => {
 
 <template>
   <section class="bg-gray-100 text-black py-20 px-6">
-    <h2 class="text-6xl font-bold text-center mb-6 uppercase">
+    <h2 id="tecSol" class="text-6xl font-bold text-center mb-6 uppercase">
       Technological Solution
     </h2>
     <p class="text-center text-black-500 mb-10 max-w-5xl mx-auto">

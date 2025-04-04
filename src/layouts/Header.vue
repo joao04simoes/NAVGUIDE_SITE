@@ -34,11 +34,11 @@ const scrollToSection = (id) => {
             <router-link to="/" class="text-cyan-600 font-medium">Home</router-link>
             <router-link to="/" @click.native="scrollToSection('pdf')"
                 class="text-gray-500 hover:text-cyan-600 transition">What is NavGuide</router-link>
-            <router-link to="/" @click.native="scrollToSection('technology')" 
+            <router-link to="/" @click.native="scrollToSection('tecSol')"
                 class=" text-gray-500 hover:text-cyan-600 transition">Technology</router-link>
             <router-link to="/" @click.native="scrollToSection('team')"
                 class="text-gray-500 hover:text-cyan-600 transition">Team</router-link>
-            <router-link to="/" @click.native="scrollToSection('partners')" 
+            <router-link to="/" @click.native="scrollToSection('partners')"
                 class=" text-gray-500 hover:text-cyan-600 transition">Partners</router-link>
 
 
@@ -63,11 +63,11 @@ const scrollToSection = (id) => {
             <router-link to="/" class="text-cyan-600 font-medium">Home</router-link>
             <router-link to="/" @click.native="scrollToSection('pdf')"
                 class="text-gray-500 hover:text-cyan-600 transition">What is NavGuide</router-link>
-            <router-link to="/" @click.native="scrollToSection('technology')" 
+            <router-link to="/" @click.native="scrollToSection('technology')"
                 class=" text-gray-500 hover:text-cyan-600 transition">Technology</router-link>
             <router-link to="/" @click.native="scrollToSection('team')"
                 class="text-gray-500 hover:text-cyan-600 transition">Team</router-link>
-            <router-link to="/" @click.native="scrollToSection('partners')" 
+            <router-link to="/" @click.native="scrollToSection('partners')"
                 class=" text-gray-500 hover:text-cyan-600 transition">Partners</router-link>
         </div>
     </nav>

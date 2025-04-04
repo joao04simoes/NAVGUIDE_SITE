@@ -31,7 +31,7 @@ const solutions = ref([
 </script>
 
 <template>
-  <div id="tecSol" class="bg-gray-100 text-white py-20 px-6">
+  <div class="bg-gray-100 text-white py-20 px-6">
     <div class="container mx-auto text-center">
       <!-- Section Title -->
       <h2 class="text-4xl md:text-5xl text-black font-bold mb-10 uppercase">
@@ -40,19 +40,13 @@ const solutions = ref([
 
       <!-- Cards Container -->
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div
-          v-for="solution in solutions"
-          :key="solution.id"
-          class="group [perspective:1000px] h-64"
-        >
+        <div v-for="solution in solutions" :key="solution.id" class="group [perspective:1000px] h-64">
           <!-- Card Wrapper -->
           <div
-            class="relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]"
-          >
+            class="relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
             <!-- Front -->
             <div
-              class="absolute inset-0 bg-cyan-700 rounded-xl flex items-center justify-center px-4 text-center [backface-visibility:hidden]"
-            >
+              class="absolute inset-0 bg-cyan-700 rounded-xl flex items-center justify-center px-4 text-center [backface-visibility:hidden]">
               <h3 class="text-2xl font-semibold">
                 {{ solution.title }}
               </h3>
@@ -60,8 +54,7 @@ const solutions = ref([
 
             <!-- Back -->
             <div
-              class="absolute inset-0 bg-cyan-900 rounded-xl px-6 py-4 flex items-center justify-center text-center [transform:rotateY(180deg)] [backface-visibility:hidden]"
-            >
+              class="absolute inset-0 bg-cyan-900 rounded-xl px-6 py-4 flex items-center justify-center text-center [transform:rotateY(180deg)] [backface-visibility:hidden]">
               <p class="text-base text-white opacity-90">
                 {{ solution.description }}
               </p>
