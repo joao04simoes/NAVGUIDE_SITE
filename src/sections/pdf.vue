@@ -1,5 +1,5 @@
 <template>
-    <section id="pdf" class="bg-gray-100 text-black py-20 px-6">
+    <section class="bg-gray-100 text-black py-20 px-6">
         <div class="max-w-6xl mx-auto text-center">
             <!-- Title -->
             <h2 class="text-3xl md:text-5xl font-bold text-black mb-6 uppercase">
@@ -11,7 +11,7 @@
         </div>
 
         <!-- PDF Viewer -->
-        <div class="max-w-5xl mx-auto">
+        <div id="pdf" class="max-w-5xl mx-auto">
             <iframe src="/joao.simoes/NAVGUIDE/images/PIC.pdf"
                 class="w-full h-[500px] border-2 border-gray-300 shadow-lg rounded-lg"></iframe>
         </div>

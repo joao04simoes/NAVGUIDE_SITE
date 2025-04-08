@@ -10,17 +10,29 @@ const fullText = "Empowering visually impaired individuals with real-time naviga
 
 // Scroll function
 const scrollToSection = (id) => {
+  const offset = 100; // 👈 Adjust based on your navbar height
+
+  const scrollWithOffset = () => {
+    const el = document.getElementById(id);
+    if (el) {
+      const y = el.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
+
   if (router.currentRoute.value.path !== "/") {
     router.push('/').then(() => {
       setTimeout(() => {
-        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+        scrollWithOffset();
       }, 300);
     });
   } else {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    scrollWithOffset();
   }
+
   mobileNav.value = false;
 };
+
 
 // Typewriter effect function
 const startTyping = () => {

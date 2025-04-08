@@ -8,22 +8,35 @@ const isMenuOpen = ref(false);
 const router = useRouter();
 const mobileNav = ref(false);
 const scrollToSection = (id) => {
+    const offset = 85; // 👈 adjust this value as needed
+
+    const scrollToTarget = () => {
+        const element = document.getElementById(id);
+        if (element) {
+            const y = element.getBoundingClientRect().top + window.pageYOffset - offset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+    };
+
     if (router.currentRoute.value.path !== "/") {
-        router.push('/').then(() => {
+        router.push("/").then(() => {
             setTimeout(() => {
-                document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+                scrollToTarget();
             }, 300);
         });
     } else {
-        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+        scrollToTarget();
     }
+
     mobileNav.value = false;
 };
 </script>
 
 <template>
-    <nav id="maintec"
-        class="bg-white shadow-lg rounded-full mx-auto mt-6 max-w-6xl px-6 py-3 flex justify-between items-center">
+    <div id="maintec"></div>
+    <nav id="at"
+        class="sticky top-1 left-0 right-0 z-50 bg-white shadow-lg rounded-full mx-auto mt-6 max-w-6xl px-6 py-3 flex justify-between items-center">
+
         <!-- Logo -->
         <div class="flex items-center space-x-2">
             <img src="/images/Logo NavGuide sem texto.png" alt="Logo" class="h-14 w-14" />
@@ -32,17 +45,24 @@ const scrollToSection = (id) => {
 
         <!-- Desktop Menu -->
         <div class="hidden md:flex space-x-8">
-            <router-link to="/" class="text-cyan-600 font-medium">Home</router-link>
-            <router-link to="/" @click.native="scrollToSection('pdf')"
-                class="text-gray-500 hover:text-cyan-600 transition">What is NavGuide</router-link>
+            <router-link to="/" @click.native="scrollToSection('maintec')"
+                class="text-cyan-600 font-medium">Home</router-link>
+            <router-link to="/" @click.native="scrollToSection('transition-section')"
+                class="text-gray-500 hover:text-cyan-600 transition">
+                What is NavGuide
+            </router-link>
             <router-link to="/" @click.native="scrollToSection('tecSol')"
-                class=" text-gray-500 hover:text-cyan-600 transition">Technology</router-link>
+                class="text-gray-500 hover:text-cyan-600 transition">
+                Technology
+            </router-link>
             <router-link to="/" @click.native="scrollToSection('team')"
-                class="text-gray-500 hover:text-cyan-600 transition">Team</router-link>
+                class="text-gray-500 hover:text-cyan-600 transition">
+                Team
+            </router-link>
             <router-link to="/" @click.native="scrollToSection('partners')"
-                class=" text-gray-500 hover:text-cyan-600 transition">Partners</router-link>
-
-
+                class="text-gray-500 hover:text-cyan-600 transition">
+                Partners
+            </router-link>
         </div>
 
         <!-- Blog -->
@@ -61,15 +81,24 @@ const scrollToSection = (id) => {
         <!-- Mobile Menu -->
         <div v-if="isMenuOpen"
             class="absolute top-16 left-0 w-full bg-white shadow-lg rounded-lg p-4 flex flex-col space-y-4 md:hidden">
-            <router-link to="/" class="text-cyan-600 font-medium">Home</router-link>
-            <router-link to="/" @click.native="scrollToSection('pdf')"
-                class="text-gray-500 hover:text-cyan-600 transition">What is NavGuide</router-link>
-            <router-link to="/" @click.native="scrollToSection('technology')"
-                class=" text-gray-500 hover:text-cyan-600 transition">Technology</router-link>
-            <router-link to="/" @click.native="scrollToSection('team')"
-                class="text-gray-500 hover:text-cyan-600 transition">Team</router-link>
-            <router-link to="/" @click.native="scrollToSection('partners')"
-                class=" text-gray-500 hover:text-cyan-600 transition">Partners</router-link>
+            <router-link to="/" @click.native="scrollToSection('maintec')" @click="isMenuOpen = !isMenuOpen"
+                class=" text-cyan-600 font-medium">Home</router-link>
+            <router-link to="/" @click.native="scrollToSection('transition-section')" @click="isMenuOpen = !isMenuOpen"
+                class="text-gray-500 hover:text-cyan-600 transition">
+                What is NavGuide
+            </router-link>
+            <router-link to="/" @click.native="scrollToSection('technology')" @click="isMenuOpen = !isMenuOpen"
+                class="text-gray-500 hover:text-cyan-600 transition">
+                Technology
+            </router-link>
+            <router-link to="/" @click.native="scrollToSection('team')" @click="isMenuOpen = !isMenuOpen"
+                class="text-gray-500 hover:text-cyan-600 transition">
+                Team
+            </router-link>
+            <router-link to="/" @click.native="scrollToSection('partners')" @click="isMenuOpen = !isMenuOpen"
+                class="text-gray-500 hover:text-cyan-600 transition">
+                Partners
+            </router-link>
         </div>
     </nav>
 </template>
