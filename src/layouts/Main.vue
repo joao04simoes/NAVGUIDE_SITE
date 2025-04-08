@@ -9,6 +9,7 @@ import Beneficiaries from "../sections/Beneficiaries.vue";
 import team from "../sections/team.vue";
 import Partners from "../sections/Partners.vue";
 import pdf from "../sections/pdf.vue";
+import counter from "../sections/counter.vue";
 
 </script>
 
@@ -25,7 +26,7 @@ import pdf from "../sections/pdf.vue";
     <pdf />
     <Partners />
     <team />
-
+    <counter />
 
 
 </template>
