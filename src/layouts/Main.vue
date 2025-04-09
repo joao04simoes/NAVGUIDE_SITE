@@ -10,6 +10,7 @@ import team from "../sections/team.vue";
 import Partners from "../sections/Partners.vue";
 import pdf from "../sections/pdf.vue";
 import counter from "../sections/counter.vue";
+import counter from "../sections/counter.vue";
 
 </script>
 

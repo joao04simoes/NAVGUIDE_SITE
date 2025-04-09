@@ -4,7 +4,7 @@ run-name: ${{ github.actor }} is running the CD ⚙️
 on:
   push:
     branches:
-      - main
+      - dev
 
 jobs:
   deploy:
@@ -17,6 +17,17 @@ jobs:
       - name: Instalar dependências
         run: npm install
 
+      - name: Set environment variables from secrets
+        run: |
+          echo "VITE_FIREBASEapiKey=${{ secrets.KEY }}" >> $GITHUB_ENV
+          echo "VITE_FIREBASEauthDomain=${{ secrets.DOM }}" >> $GITHUB_ENV
+          echo "VITE_FIREBASEprojectId=${{ secrets.PID }}" >> $GITHUB_ENV
+          echo "VITE_FIREBASEstorageBucket=${{ secrets.BUC }}" >> $GITHUB_ENV
+          echo "VITE_FIREBASEmessagingSenderId=${{ secrets.SID }}" >> $GITHUB_ENV
+          echo "VITE_FIREBASEappId=${{ secrets.APPID }}" >> $GITHUB_ENV
+          echo "VITE_FIREBASEmeasurementId=${{ secrets.EID }}" >> $GITHUB_ENV
+      
+      
       - name: Construir o projeto
         run: npm run build
 
