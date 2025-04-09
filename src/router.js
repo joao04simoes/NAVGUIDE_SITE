@@ -7,7 +7,12 @@ import techno from './layouts/techno.vue';
 const routes = [
     { path: '/', component: Main },
     { path: '/blog', component: Blog },
-    { path: '/technology', component: techno }
+    { path: '/technology', component: techno },
+    {
+        path: '/:catchAll(.*)',
+        name: 'NotFound',
+        component: () => import('./layouts/notFound.vue'),
+    }
 
 ];
 
