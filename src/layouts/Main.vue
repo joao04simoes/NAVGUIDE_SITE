@@ -10,6 +10,7 @@ import Partners from "../sections/Partners.vue";
 import team from "../sections/team.vue";
 import Schedule from "../sections/Schedule.vue";
 import pdf from "../sections/pdf.vue";
+import counter from "../sections/counter.vue";
 
 </script>
 
@@ -27,7 +28,7 @@ import pdf from "../sections/pdf.vue";
     <Partners />
     <Schedule />
     <team />
-
+    <counter />
 
 
 </template>
