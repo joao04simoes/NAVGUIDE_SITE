@@ -6,7 +6,7 @@
 
       <!-- Gantt Chart PNG -->
       <div class="w-full flex justify-center">
-        <img src="/joao.simoes/NAVGUIDE/images/schedule_gantt.png" alt="Gantt Chart"
+        <img src="/images/schedule_gantt.png" alt="Gantt Chart"
           class="w-full md:w-3/4 border-2 border-gray-300 rounded-lg shadow-lg" />
       </div>
     </div>
