@@ -9,7 +9,7 @@ const teamMembers = ref([
     studentId: "106282",
     role: "Partnerships & Documentation",
     bio: "Manages external collaborations and partnerships while ensuring the website, comprehensive documentation and reporting for the project.",
-    photo: "/joao.simoes/NAVGUIDE/images/IMG_5071.JPG",
+    photo: "/images/IMG_5071.JPG",
     linkedin: "https://www.linkedin.com/in/sofiacvicente/",
   },
   {
@@ -66,7 +66,7 @@ const teamMembers = ref([
       <h2 class="text-6xl font-bold text-black mb-6 uppercase">Meet Our Team</h2>
       <p class="text-lg text-gray-600 mb-10 max-w-6xl mx-auto">
         United by a shared vision of inclusivity, our team is dedicated to transforming the supermarket experience for
-        visually impaired individuals. We strive to create an independent, and empowering way for everyone 
+        visually impaired individuals. We strive to create an independent, and empowering way for everyone
         to navigate their surroundings with confidence.
       </p>
 
