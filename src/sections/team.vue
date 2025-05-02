@@ -9,7 +9,7 @@ const teamMembers = ref([
     studentId: "106282",
     role: "Partnerships & Documentation",
     bio: "Manages external collaborations and partnerships while ensuring the website, comprehensive documentation and reporting for the project.",
-    photo: "/images/IMG_5071.JPG",
+    photo: "/joao.simoes/NAVGUIDE/images/IMG_5071.JPG",
     linkedin: "https://www.linkedin.com/in/sofiacvicente/",
   },
   {
