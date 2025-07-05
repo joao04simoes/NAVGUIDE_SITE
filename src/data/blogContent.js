@@ -312,7 +312,7 @@ export const reports = ref([
         <!-- Vídeo mais largo -->
         <div class="lg:w-3/5 w-full">
             <video controls class="w-full rounded shadow-lg">
-            <source src="/images/video prototipo.mp4" type="video/mp4">
+            <source src="/joao.simoes/NAVGUIDE/images/video prototipo.mp4" type="video/mp4">
             Your browser does not support the video tag.
             </video>
         </div>
@@ -352,7 +352,7 @@ export const reports = ref([
         <!-- Vídeo à direita -->
         <div class="lg:w-2/5 w-full">
             <video controls class="w-full rounded shadow-lg">
-            <source src="/images/v4.mp4" type="video/mp4">
+            <source src="/joao.simoes/NAVGUIDE/images/v4.mp4" type="video/mp4">
             Your browser does not support the video tag.
             </video>
         </div>
