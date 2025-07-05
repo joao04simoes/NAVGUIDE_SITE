@@ -75,10 +75,10 @@ export const reports = ref([
     </ul>
   </div>
 `
-,
+    ,
     date: "2025-02-14",
     type: 'report',
-    image: '/images/wr1.jpg'
+    image: '/joao.simoes/NAVGUIDE/images/wr1.jpg'
   },
   {
     id: 6,
@@ -93,10 +93,10 @@ export const reports = ref([
         <li><strong>Website development:</strong> We continued working on the platform and began <strong>researching the materials</strong> required for the project, within the given budget.</li>
         </ul>
     </div>`
-, date: "2025-02-21",
+    , date: "2025-02-21",
     type: 'report',
-    image: '/images/wr2.png',
-    file: '/images/Project Proposal.pdf'
+    image: '/joao.simoes/NAVGUIDE/images/wr2.png',
+    file: '/joao.simoes/NAVGUIDE/images/Project Proposal.pdf'
   },
   {
     id: 7,
@@ -111,10 +111,10 @@ export const reports = ref([
         </ul>
     </div>
     `
-,
+    ,
     date: "2025-02-28",
     type: 'report',
-    image: '/images/wr3.jpg'
+    image: '/joao.simoes/NAVGUIDE/images/wr3.jpg'
   },
   {
     id: 8,
@@ -135,7 +135,7 @@ export const reports = ref([
         </div>
     </div>
 `
-,
+    ,
     date: "2025-03-07",
     type: 'report',
     image: '/images/wr4.jpg'
@@ -235,7 +235,7 @@ export const reports = ref([
   },
   {
     id: 17,
-    title: "Connecting Web App with Server", 
+    title: "Connecting Web App with Server",
     subtitle: "Weekly Report 13",
     fullText: `
   <div>
@@ -337,7 +337,7 @@ export const reports = ref([
     id: 21,
     title: "Finalizing Localization & Filming Presentation Video",
     subtitle: "Weekly Report 17",
-   fullText: `
+    fullText: `
         <div class="flex flex-col lg:flex-row gap-6 items-start">
         <!-- Texto à esquerda -->
         <div class="lg:w-1/2 text-gray-800">
@@ -386,7 +386,7 @@ export const reports = ref([
     type: 'report',
     image: '/images/w18.jpg'
 
-        
+
   },
   {
     id: 23,
