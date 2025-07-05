@@ -410,7 +410,7 @@ export const reports = ref([
     id: 25,
     title: "Final Preparations for Eletroday",
     subtitle: "Weekly Report 21",
-    fullText: "Last week, the team was working on developing the flyers about the project to distribute to the public at Eletroday. They were also putting the final touches on the web app. Lastly, they were organizing all the necessary materials to present and promote the project at Eletroday.",
+    fullText: "Last week the team was working on developing the flyers about the project to distribute to the public at Eletroday. They were also putting the final touches on the web app. Lastly, they were organizing all the necessary materials to present and promote the project at Eletroday.",
     date: "2025-07-04 ",
     type: 'report',
     image: '/joao.simoes/NAVGUIDE/images/wr25.jpg'
