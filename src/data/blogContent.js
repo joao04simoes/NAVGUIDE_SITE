@@ -134,7 +134,7 @@ export const reports = ref([
         <img src="/joao.simoes/NAVGUIDE/images/int3.jpg" alt="Interview 3" class="rounded shadow-md" />
         </div>
     </div>
-`/ joao.simoes / NAVGUIDE
+`
     ,
     date: "2025-03-07",
     type: 'report',
