@@ -7,7 +7,7 @@ const teamMembers = ref([
     id: 1,
     name: "Sofia Vicente",
     studentId: "106282",
-    role: "Partnerships & Documentation",
+    role: "Web Developm, Partnerships & Documentation",
     bio: "Manages external collaborations and partnerships while ensuring the website, comprehensive documentation and reporting for the project.",
     photo: "/joao.simoes/NAVGUIDE/images/IMG_5071.JPG",
     linkedin: "https://www.linkedin.com/in/sofiacvicente/",
