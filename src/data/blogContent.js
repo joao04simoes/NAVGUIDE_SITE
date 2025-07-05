@@ -129,16 +129,16 @@ export const reports = ref([
         </ul>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4">
-        <img src="/images/int1.JPG" alt="Interview 1" class="rounded shadow-md" />
-        <img src="/images/int2.JPG" alt="Interview 2" class="rounded shadow-md" />
-        <img src="/images/int3.jpg" alt="Interview 3" class="rounded shadow-md" />
+        <img src="/joao.simoes/NAVGUIDE/images/int1.JPG" alt="Interview 1" class="rounded shadow-md" />
+        <img src="/joao.simoes/NAVGUIDE/images/int2.JPG" alt="Interview 2" class="rounded shadow-md" />
+        <img src="/joao.simoes/NAVGUIDE/images/int3.jpg" alt="Interview 3" class="rounded shadow-md" />
         </div>
     </div>
-`
+`/ joao.simoes / NAVGUIDE
     ,
     date: "2025-03-07",
     type: 'report',
-    image: '/images/wr4.jpg'
+    image: '/joao.simoes/NAVGUIDE/images/wr4.jpg'
   },
 
   {
@@ -148,7 +148,7 @@ export const reports = ref([
     fullText: "<p>  During this week, the team compiled a list of the materials needed for the development of the prototype and created a list of project requirements. These included functional and non-functional requirements, as well as hardware and software requirements. They are also available in the section Technology of our website.</p>",
     date: "2025-03-21",
     type: 'report',
-    image: '/images/wr5.jpg'
+    image: '/joao.simoes/NAVGUIDE/images/wr5.jpg'
   },
   {
     id: 11,
@@ -164,12 +164,12 @@ export const reports = ref([
             </ul>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-1 gap-4 pt-4">
-        <img src="/images/pr1.jpg" alt="Interview 1" class="rounded shadow-md" />
+        <img src="/joao.simoes/NAVGUIDE/images/pr1.jpg" alt="Interview 1" class="rounded shadow-md" />
         </div>
 `,
     date: "2025-03-28",
     type: 'report',
-    image: '/images/wr6.jpg'
+    image: '/joao.simoes/NAVGUIDE/images/wr6.jpg'
   },
   {
     id: 12,
@@ -186,7 +186,7 @@ export const reports = ref([
     </div>`,
     date: "2025-04-04 ",
     type: 'report',
-    image: '/images/wr7.jpg'
+    image: '/joao.simoes/NAVGUIDE/images/wr7.jpg'
   },
   {
     id: 13,
@@ -195,7 +195,7 @@ export const reports = ref([
     fullText: "This week, the team was preparing for the final exams of the course units taught in the third term. ",
     date: "2025-04-11 ",
     type: 'report',
-    image: '/images/wr8.jpg'
+    image: '/joao.simoes/NAVGUIDE/images/wr8.jpg'
   },
   {
     id: 14,
@@ -204,7 +204,7 @@ export const reports = ref([
     fullText: "This week, the team had exams for the course units — Electronic Systems and Computer Networks and Internet — for which preparation was carried out the previous week.",
     date: "2025-04-18 ",
     type: 'report',
-    image: '/images/wr9.jpg'
+    image: '/joao.simoes/NAVGUIDE/images/wr9.jpg'
   },
   {
     id: 15,
@@ -221,7 +221,7 @@ export const reports = ref([
     `,
     date: "2025-04-25 ",
     type: 'report',
-    image: '/images/wr11.jpg'
+    image: '/joao.simoes/NAVGUIDE/images/wr11.jpg'
   },
 
   {
@@ -231,7 +231,7 @@ export const reports = ref([
     fullText: "The team presented the pitch deck that had already been prepared and submitted to Professor Pedro Vitor. The presentation took place in an auditorium of the Civil Engineering building and brought together members of the other teams, also supervised by Professor Pedro Vitor and Professor João Marafuz Gaspar, who also presented their projects.",
     date: "2025-05-02 ",
     type: 'report',
-    image: '/images/wr12.jpg'
+    image: '/joao.simoes/NAVGUIDE/images/wr12.jpg'
   },
   {
     id: 17,
@@ -260,7 +260,7 @@ export const reports = ref([
 `,
     date: "2025-05-09 ",
     type: 'report',
-    image: '/images/wr13.jpg'
+    image: '/joao.simoes/NAVGUIDE/images/wr13.jpg'
   },
   {
     id: 18,
@@ -278,7 +278,7 @@ export const reports = ref([
 `,
     date: "2025-05-16 ",
     type: 'report',
-    image: '/images/wr14.jpg'
+    image: '/joao.simoes/NAVGUIDE/images/wr14.jpg'
   },
   {
     id: 19,
@@ -322,7 +322,7 @@ export const reports = ref([
 
     date: "2025-05-23 ",
     type: 'report',
-    image: '/images/wr15.jpg'
+    image: '/joao.simoes/NAVGUIDE/images/wr15.jpg'
   },
   {
     id: 20,
@@ -331,7 +331,7 @@ export const reports = ref([
     fullText: "Some upgrades were made, particularly regarding the sensors in our prototype. Several adjustments were also made to the web app, especially in terms of design.",
     date: "2025-05-30 ",
     type: 'report',
-    image: '/images/wr16.jpg'
+    image: '/joao.simoes/NAVGUIDE/images/wr16.jpg'
   },
   {
     id: 21,
@@ -360,7 +360,7 @@ export const reports = ref([
         `,
     date: "2025-06-06 ",
     type: 'report',
-    image: '/images/wr17.jpg'
+    image: '/joao.simoes/NAVGUIDE/images/wr17.jpg'
   },
   {
     id: 22,
@@ -384,7 +384,7 @@ export const reports = ref([
         `,
     date: "2025-06-13",
     type: 'report',
-    image: '/images/w18.jpg'
+    image: '/joao.simoes/NAVGUIDE/images/w18.jpg'
 
 
   },
@@ -395,7 +395,7 @@ export const reports = ref([
     fullText: "Last and this week,  the team created and submitted the communication materials that had been developed the previous week, and there were no further advancements on the prototype, as it was the week dedicated to final exam preparation.",
     date: "2025-06-20 ",
     type: 'report',
-    image: '/images/wr19.jpg'
+    image: '/joao.simoes/NAVGUIDE/images/wr19.jpg'
   },
   {
     id: 24,
@@ -404,7 +404,7 @@ export const reports = ref([
     fullText: "This week, the project was on standby as it was exam week for all team members.",
     date: "2025-06-27 ",
     type: 'report',
-    image: '/images/wr9.jpg'
+    image: '/joao.simoes/NAVGUIDE/images/wr9.jpg'
   },
   {
     id: 25,
@@ -413,7 +413,7 @@ export const reports = ref([
     fullText: "Last week, the team was working on developing the flyers about the project to distribute to the public at Eletroday. They were also putting the final touches on the web app. Lastly, they were organizing all the necessary materials to present and promote the project at Eletroday.",
     date: "2025-07-04 ",
     type: 'report',
-    image: '/images/wr25.jpg'
+    image: '/joao.simoes/NAVGUIDE/images/wr25.jpg'
   },
 
 ]);
