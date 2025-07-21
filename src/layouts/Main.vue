@@ -28,7 +28,7 @@ import counter from "../sections/counter.vue";
     <Partners />
     <Schedule />
     <team />
-    <counter />
+
 
 
 </template>
